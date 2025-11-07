@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->string('inventory_id')->primary();
             $table->string('inventory_name');
-            $table->integer('inventory_amount');
         });
     }
 
