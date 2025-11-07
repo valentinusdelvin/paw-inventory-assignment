@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inventory', [App\Http\Controllers\inventoryController::class, 'index']);
+Route::get('/inventory', [App\Http\Controllers\inventoryController::class, 'index'])->name('inventory.index');
+
+Route::get('/inventory/create', [App\Http\Controllers\inventoryController::class, 'create'])-> name('inventory.create');
+
+Route::post('/inventory', [App\Http\Controllers\inventoryController::class, 'store'])-> name('inventory.store');
